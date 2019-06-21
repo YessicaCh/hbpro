@@ -122,7 +122,7 @@ USE_L10N = True
 USE_TZ = True
 
 LOGIN_URL = 'users/login'
-LOGIN_REDIRECT_URL = '/'
+LOGIN_REDIRECT_URL = '/contentuser/progress'
 LOGOUT_REDIRECT_URL = '/'
 
 STATIC_URL = '/static/'

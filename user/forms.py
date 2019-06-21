@@ -9,12 +9,9 @@ class CustomUserCreationForm(UserCreationForm):
     #email = forms.EmailField(max_length=254, help_text='Required. Inform a valid email address.')
     class Meta(UserCreationForm):
         model = HbproUser
-        widgets = {
-            'username': forms.TextInput(attrs={'placeholder': 'Name'}),
-            'password': forms.PasswordInput(attrs={'placeholder': 'Password'}),
-        } 
-        fields = ('username','password')
-        subject = forms.CharField(max_length=100, help_text='100 characters max.')
+        fields = ['username','password']
+       
+        #subject = forms.CharField(max_length=100, help_text='100 characters max.')
 """class CustomUserCreationForm(UserCreationForm):
 
     class Meta(UserCreationForm):

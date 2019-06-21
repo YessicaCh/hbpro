@@ -4,6 +4,6 @@ from register.views import register_db,SignUp
 #url(r'^',register_db, name='register'), 
 
 urlpatterns = [
-    url('', register_db,name='register'), 
+    url('', SignUp.as_view(),name='register'), 
 
 ]

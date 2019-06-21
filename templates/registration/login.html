@@ -18,15 +18,17 @@
             <div class="col-lg-8 mx-auto">
                 <form  method="POST" name="sentMessage" id="loginForm" >
                     {% csrf_token %}
+            
                     {% for field in form %}            
                     <div class="control-group">
                         <div class="form-group floating-label-form-group controls mb-0 pb-1">
-                            <label>{{ field.label }}</label>
+                            <label >{{ field.label }}</label>
                             {{field}}
                             <p class="help-block text-danger"></p>
                         </div>              
                     </div>          
                     {% endfor %}
+
                     <br>
                     <div id="success"></div>
                     <div class="form-group">
@@ -37,4 +39,8 @@
         </div>
     </div>
 </section>
+<script type="text/javascript">
+    document.getElementById("id_username").placeholder = "Username";
+    document.getElementById("id_password").placeholder = "Password";
+</script>
 {% endblock %}
